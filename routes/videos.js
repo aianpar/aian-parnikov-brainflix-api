@@ -14,3 +14,23 @@ router.get("/",(req,res)=>{
     ))
     res.json(videoList);
 })
+
+router.get("/:id",(req,res)=>{
+    const videoId = req.params.id;
+    const foundVideo = videoDetails.find((video) => {
+        return video.id === videoId;
+      });
+
+    if (!foundVideo) {
+        res.status(404).send("Video is not found");
+        return;
+      }
+    
+    res.send(foundVideo);
+
+
+})
+
+
+
+export default router
