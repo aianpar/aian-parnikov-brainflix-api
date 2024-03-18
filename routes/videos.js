@@ -45,7 +45,7 @@ router.post("/",(req,res)=>{
         timestamp: Date.now(),
         channel: "You",
         views: "999,999",
-        like: "3,000",
+        likes: "3,000",
         image: "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg",
         ...req.body,
     }
